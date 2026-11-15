@@ -1,0 +1,864 @@
+/* 1. GLOBAL SETTINGS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f7ff;
+  color: #171d32;
+}
+
+/* 2. NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.logo,
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  background: #3525d9;
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.logo h3 {
+  font-size: 16px;
+}
+
+.logo small {
+  font-size: 10px;
+  color: #808080;
+}
+
+.nav-links {
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #171d32;
+  font-size: 15px;
+}
+
+.nav-links a:hover,
+.footer-bottom a:hover {
+  color: #3929df;
+}
+
+.nav-btn {
+  background: #4232e5;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* 3. HERO SECTION */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 35px;
+  padding: 40px 30px;
+  align-items: start;
+}
+
+.hero-tag {
+  color: #3929df;
+  background: #e9e8ff;
+  padding: 6px 10px;
+  font-size: 11px;
+  border-radius: 4px;
+}
+
+.hero-left h1 {
+  font-size: 45px;
+  line-height: 1.2;
+  margin-top: 18px;
+  color: black;
+}
+
+.hero-left h1 span {
+  display: block;
+  color: #4939e8;
+}
+
+.hero-left>p {
+  color: #626579;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 15px 0;
+  max-width: 650px;
+  text-align: justify;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-buttons button,
+.rate-btn {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #3929df;
+  color: white;
+  cursor: pointer;
+}
+
+.hero-buttons button:last-child {
+  background: #e8eaff;
+  color: #171d32;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background: #eff0ff;
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.hero-stats small,
+.hero-stats p {
+  font-size: 10px;
+  color: #555;
+}
+
+.hero-stats h3 {
+  color: #3929df;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.calculator {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px #00000012;
+}
+
+.calculator h3 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.calculator>small {
+  color: #777;
+  font-size: 12px;
+}
+
+.calculator label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 15px 0 6px;
+}
+
+.calculator input,
+.calculator select {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  outline: none;
+  background: #f0f1ff;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.estimate {
+  display: flex;
+  justify-content: space-between;
+  background: #f0f1ff;
+  padding: 12px;
+  margin-top: 12px;
+  font-size: 11px;
+}
+
+.estimate strong {
+  color: #3929df;
+}
+
+.rate-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 13px;
+}
+
+/* 4. CARRIER BAR */
+
+.carrier-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px 25px;
+  background: #e6e9ff;
+  min-height: 65px;
+}
+
+.carrier-title {
+  font-size: 11px;
+  color: #252c50;
+  font-weight: bold;
+}
+
+.carrier {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #34385c;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.carrier span {
+  color: #5143e9;
+  font-size: 18px;
+}
+
+/* 5. FREIGHT SYSTEMS */
+
+.freight-section {
+  padding: 32px 3.6%;
+  border-top: 3px solid #e2e3ff;
+}
+
+.freight-heading {
+  margin-bottom: 18px;
+}
+
+.section-tag {
+  display: block;
+  color: #3929df;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  margin-bottom: 8px;
+}
+
+.freight-heading h2 {
+  font-size: 36px;
+  letter-spacing: -1.2px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.freight-heading p {
+  max-width: 550px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #55596a;
+}
+
+.freight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.freight-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 19px;
+  border-radius: 11px;
+  border: 1px solid #f0eff8;
+  min-height: 225px;
+  transition: 0.3s;
+}
+
+.freight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px #28236414;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.service-code {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.service-code.purple {
+  background: #e6e0ff;
+  color: #3021a9;
+}
+
+.service-code.cyan {
+  background: #a9efff;
+  color: #07536b;
+}
+
+.freight-card h3 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.service-description {
+  color: #55596a;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.service-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0f1ff;
+  padding: 8px 9px;
+  border-radius: 6px;
+  color: #55596a;
+  font: 600 10px monospace;
+}
+
+.metric-arrow {
+  color: #3929df;
+  font: 19px Arial;
+}
+
+/* 6. FREIGHT MATRIX */
+
+.matrix-section,
+.case-section,
+.booking-section {
+  background: #f7f8ff;
+  padding: 35px 5%;
+}
+
+.matrix-heading,
+.case-heading {
+  margin-bottom: 20px;
+}
+
+.matrix-heading span,
+.case-heading span,
+.booking-heading span {
+  color: #3929df;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.matrix-heading h2,
+.case-heading h2,
+.booking-heading h2 {
+  color: #17233d;
+  font-size: 25px;
+  margin: 7px 0;
+}
+
+.matrix-heading p,
+.case-heading p,
+.booking-heading p {
+  color: #778197;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.matrix-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px #1423460f;
+}
+
+.matrix-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+}
+
+.matrix-table th {
+  background: #eef0ff;
+  color: #526078;
+  font-size: 10px;
+  text-align: left;
+  padding: 15px 12px;
+}
+
+.matrix-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #edf0f6;
+  color: #536078;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.matrix-table tbody tr:hover {
+  background: #f9faff;
+}
+
+.matrix-table td:first-child {
+  white-space: normal;
+  min-width: 180px;
+}
+
+.matrix-table td strong {
+  display: block;
+  color: #1c2942;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.matrix-table td small {
+  display: block;
+  color: #8993a7;
+  font-size: 9px;
+}
+
+.status-badge {
+  display: inline-block;
+  background: #e9e7ff;
+  color: #3929df;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 9px;
+}
+
+/* 7. CASE STUDIES */
+
+.case-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.case-card {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px #1423460f;
+}
+
+.case-image {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.case-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.case-image span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #0f192dcc;
+  color: white;
+  padding: 6px 9px;
+  font-size: 9px;
+}
+
+.case-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.case-tag {
+  color: #3929df;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.case-content h3 {
+  color: #17233d;
+  font-size: 16px;
+  margin: 7px 0;
+}
+
+.case-content p {
+  color: #778197;
+  font-size: 11px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.case-results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background: #f0f2ff;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.case-results div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.case-results small {
+  color: #68738a;
+  font-size: 9px;
+}
+
+.case-results strong {
+  color: #3929df;
+  font-size: 11px;
+}
+
+/* 8. BOOKING FORM */
+
+.booking-card {
+  max-width: 1150px;
+  margin: auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px #14234614;
+}
+
+.booking-heading {
+  margin-bottom: 25px;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.booking-field {
+  margin-bottom: 16px;
+}
+
+.booking-field>label {
+  display: block;
+  color: #26334b;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.booking-field input[type="text"],
+.booking-field input[type="email"],
+.booking-field select,
+.booking-field textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #e1e5f0;
+  border-radius: 5px;
+  background: #f8f9ff;
+  font-size: 11px;
+  outline: none;
+}
+
+.booking-field input:focus,
+.booking-field select:focus,
+.booking-field textarea:focus {
+  border-color: #3929df;
+}
+
+.booking-field textarea {
+  height: 75px;
+  resize: vertical;
+}
+
+.booking-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.booking-options label,
+.booking-checks label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #59647a;
+  font-size: 10px;
+}
+
+.booking-checks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+  background: #f8f9ff;
+  padding: 13px;
+  border-radius: 5px;
+}
+
+.booking-options input,
+.booking-checks input {
+  accent-color: #3929df;
+}
+
+.booking-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid #edf0f6;
+  padding-top: 18px;
+  margin-top: 5px;
+}
+
+.reset-btn,
+.booking-submit {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 5px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.reset-btn {
+  background: #f0f1f7;
+  color: #4c5870;
+}
+
+.booking-submit {
+  background: #3929df;
+  color: white;
+}
+
+.booking-submit:hover {
+  background: #281bb5;
+}
+
+/* 9. FOOTER */
+
+.footer {
+  background: #f7f8ff;
+  padding: 35px 5% 15px;
+  color: #18233b;
+  border-top: 1px solid #e4e7f2;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding-bottom: 25px;
+}
+
+.footer-about h3 {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.footer-about p {
+  font-size: 11px;
+  color: #68738a;
+  line-height: 1.7;
+  max-width: 250px;
+  margin-bottom: 12px;
+}
+
+.footer-about span {
+  display: inline-block;
+  font-size: 9px;
+  color: #3929df;
+  margin: 0 10px 5px 0;
+}
+
+.footer-column h4 {
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+
+.footer-column p {
+  font-size: 10px;
+  color: #68738a;
+  margin-bottom: 9px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-top: 1px solid #dfe3ef;
+  padding-top: 15px;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+  font-size: 9px;
+  color: #68738a;
+}
+
+.footer-bottom a {
+  text-decoration: none;
+  margin-left: 18px;
+}
+
+
+/* RESPONSIVE DESIGN - ALL SECTIONS*/
+
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Hero */
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 25px 15px;
+  }
+
+  .hero-left h1 {
+    font-size: 28px;
+  }
+
+  .hero-stats {
+    flex-wrap: wrap;
+  }
+
+  /* Carrier Bar */
+  .carrier-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Freight Systems */
+  .freight-section {
+    padding: 25px 4%;
+  }
+
+  .freight-heading h2 {
+    font-size: 25px;
+  }
+
+  .freight-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .freight-card {
+    min-height: 210px;
+    padding: 15px;
+  }
+
+  .freight-card h3 {
+    font-size: 17px;
+  }
+
+  .service-description {
+    font-size: 12px;
+  }
+
+  /* Freight Matrix */
+  .matrix-section {
+    padding: 30px 4%;
+  }
+
+  .matrix-heading h2 {
+    font-size: 21px;
+  }
+
+  .matrix-table-wrapper {
+    overflow-x: auto;
+  }
+
+  /* Case Studies */
+  .case-section {
+    padding: 30px 4%;
+  }
+
+  .case-heading h2 {
+    font-size: 21px;
+  }
+
+  .case-card {
+    grid-template-columns: 1fr;
+  }
+
+  .case-image {
+    height: 220px;
+  }
+
+  .case-content {
+    padding: 18px;
+  }
+
+  .case-results {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Booking Form */
+  .booking-section {
+    padding: 30px 4%;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .booking-card {
+    padding: 18px;
+  }
+
+  .booking-heading h2 {
+    font-size: 21px;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
