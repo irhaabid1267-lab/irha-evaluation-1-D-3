@@ -4,27 +4,27 @@ function CarrierBar() {
         <section className="carrier-bar">
 
             <div className="carrier-title">
-                ✣ TIER-1 VALIDATED CARRIERS
+                TIER-1 VALIDATED CARRIERS
             </div>
 
             <div className="carrier">
-                <span>♧</span> MAERSK LINE
+                MAERSK LINE
             </div>
 
             <div className="carrier">
-                <span>♜</span> HAPAG-LLOYD
+                HAPAG-LLOYD
             </div>
 
             <div className="carrier">
-                <span>✈</span> FEDEX CARGO
+                FEDEX CARGO
             </div>
 
             <div className="carrier">
-                <span>▣</span> DB SCHENKER
+                DB SCHENKER
             </div>
 
             <div className="carrier">
-                <span>♧</span> DHL GLOBAL
+                DHL GLOBAL
             </div>
 
         </section>
